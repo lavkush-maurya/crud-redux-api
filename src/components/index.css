@@ -1,0 +1,19 @@
+input {
+  padding: 10px;
+  margin-bottom: 1rem;
+}
+
+button {
+  padding: 5px 10px;
+  height: 40px;
+  width: 120px;
+  color: white;
+  background-color: coral;
+  border: none;
+  border-radius: 10px;
+}
+
+button:hover {
+  background-color: yellowgreen;
+  color: black;
+}
