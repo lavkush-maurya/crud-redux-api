@@ -19,7 +19,7 @@ const Editpage = () => {
   });
   const handleEditData = () => {
     dispatch(editData({ id: id, data: editValueData }));
-    navigate("/");
+    navigate("/crud-redux-api");
   };
   const handlechange = (e, fieldName) => {
     const value = e.target.value;
