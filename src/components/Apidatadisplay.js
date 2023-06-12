@@ -51,7 +51,7 @@ const ApidataDisplay = () => {
                       {isDeleting ? "Deleting..." : "Delete"}
                     </button>
 
-                    <Link to={`/edit/${id}`}>Edit</Link>
+                    <Link to={`crud-redux-api/edit/${id}`}>Edit</Link>
                   </td>
                 </tr>
               ))}
