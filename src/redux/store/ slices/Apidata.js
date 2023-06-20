@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 export const fetchdata = createAsyncThunk("fetchdata", async () => {
   const response = await fetch(
-    "https://mytodoo2023-default-rtdb.firebaseio.com/users.json"
+    "https://mytodo2222-default-rtdb.asia-southeast1.firebasedatabase.app/users.json"
   );
   const result = response.json();
   return result;
@@ -10,7 +10,7 @@ export const fetchdata = createAsyncThunk("fetchdata", async () => {
 export const deleteData = createAsyncThunk("deleteData", async (id) => {
   try {
     const response = await fetch(
-      `https://mytodoo2023-default-rtdb.firebaseio.com/users/${id}.json`,
+      `https://mytodo2222-default-rtdb.asia-southeast1.firebasedatabase.app/${id}.json`,
       {
         method: "delete",
       }
@@ -26,7 +26,7 @@ export const deleteData = createAsyncThunk("deleteData", async (id) => {
 export const insertapi = createAsyncThunk("insertapi", async (data) => {
   try {
     const response = await fetch(
-      "https://mytodoo2023-default-rtdb.firebaseio.com/users.json",
+      "https://mytodo2222-default-rtdb.asia-southeast1.firebasedatabase.app/users.json",
       {
         method: "POST",
         body: JSON.stringify(data),
@@ -47,7 +47,7 @@ export const insertapi = createAsyncThunk("insertapi", async (data) => {
 export const editData = createAsyncThunk("editData", async ({ id, data }) => {
   try {
     const response = await fetch(
-      `https://mytodoo2023-default-rtdb.firebaseio.com/users/${id}.json`,
+      `https://mytodo2222-default-rtdb.asia-southeast1.firebasedatabase.app/users/${id}.json`,
       {
         method: "PUT",
         body: JSON.stringify(data),
